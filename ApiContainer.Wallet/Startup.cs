@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Wallet.Infra.Data.Context;
+using Wallet.Infra.Ioc;
 
 namespace ApiContainer.Wallet
 {
@@ -35,7 +36,7 @@ namespace ApiContainer.Wallet
                 options.UseSqlServer(Configuration.GetConnectionString("WalletDBConnectionString"));
             });
 
-
+            RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,6 +57,11 @@ namespace ApiContainer.Wallet
             {
                 endpoints.MapControllers();
             });
+        }
+
+        public static void RegisterServices(IServiceCollection service)
+        {
+            DependencyContainer.RegisterServices(service);
         }
     }
 }

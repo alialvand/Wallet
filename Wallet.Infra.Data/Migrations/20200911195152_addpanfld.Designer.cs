@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Wallet.Infra.Data.Context;
 
 namespace Wallet.Infra.Data.Migrations
 {
     [DbContext(typeof(WalletDBContext))]
-    partial class WalletDBContextModelSnapshot : ModelSnapshot
+    [Migration("20200911195152_addpanfld")]
+    partial class addpanfld
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

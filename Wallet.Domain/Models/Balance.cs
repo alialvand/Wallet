@@ -14,5 +14,7 @@ namespace Wallet.Domain.Models
         public string TransactionDate { get; set; }
 
         public string  Desc { get; set; }
+
+        public long  Pan { get; set; }
     }
 }

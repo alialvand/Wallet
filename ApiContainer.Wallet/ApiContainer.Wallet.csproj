@@ -12,7 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Wallet.Core\Wallet.Core.csproj" />
     <ProjectReference Include="..\Wallet.Infra.Data\Wallet.Infra.Data.csproj" />
+    <ProjectReference Include="..\Wallet.Infra.Ioc\Wallet.Infra.Ioc.csproj" />
   </ItemGroup>
 
 
